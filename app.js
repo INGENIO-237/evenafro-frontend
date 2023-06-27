@@ -13,9 +13,10 @@ app.use(express.urlencoded({ extended: false }));
 
 // Define default layout and templating
 app.set("view engine", "ejs");
+app.set("views", "views");
 
 // Static files
-app.use(express.static("/public"));
+app.use(express.static("public"));
 
 // app.set("views")
 app.use(layouts);

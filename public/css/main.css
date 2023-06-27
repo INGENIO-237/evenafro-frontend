@@ -494,12 +494,12 @@ footer .content .copyrights .legal a {
     display: inherit;
   }
   header .menu {
-    position: relative;
+    position: fixed;
     transform: translateX(0);
     width: -moz-fit-content;
     width: fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    top: -5%;
+    left: 36%;
     background: none;
   }
   header .menu i {
