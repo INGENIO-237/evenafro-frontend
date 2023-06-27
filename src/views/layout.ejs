@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EvenAfro</title>
+
+    <!-- Google font SORA -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header class="custom-wrapper">
+      <div class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="logo">
+        <img src="/images/logo.png" alt="EVENAFRO LOGO" />
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">How it works</a></li>
+          <li><a href="">Contact us</a></li>
+        </ul>
+      </nav>
+      <div class="notifs">
+        <i class="fa-solid fa-bell"></i>
+      </div>
+      <div class="language">
+        <select name="lang" id="lang">
+          <option value="english">English</option>
+          <option value="french">French</option>
+        </select>
+      </div>
+    </header>
+    <%- body %>
+    <footer class="custom-wrapper">
+      <div class="logo">
+        <img src="/images/logo-footer.png" alt="LOGO EVENAFRO FOOTER" />
+      </div>
+      <div class="content">
+        <h1>Let’s get started on something great</h1>
+        <p>Join over 4,000+ Advertiser already growing with EVENAFRO.</p>
+        <div class="content-footer">
+          <div class="btn google-play">
+            <div>
+              <img src="/images/google-play.png" alt="Google Play" />
+            </div>
+            <div>
+              <p class="upper-text">Get it on</p>
+              <p class="lower-text">Google Play</p>
+            </div>
+          </div>
+          <div class="btn app-store">
+            <div>
+              <img src="/images/app-store.png" alt="App Store" />
+            </div>
+            <div>
+              <p class="upper-text">Download on the</p>
+              <p class="lower-text">App Store</p>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="copyrights">
+            <div class="content">
+                <span>© 2023 EVENAFRO. All rights reserved.</span>
+            </div>
+            <div class="legal">
+                <a href="">Terms</a>
+                <a href="">Privacy</a>
+                <a href="">Cookies</a>
+            </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
