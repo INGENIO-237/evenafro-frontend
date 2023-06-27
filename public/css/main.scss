@@ -593,12 +593,12 @@ footer {
     }
 
     .menu {
-      position: fixed;
+      position: relative;
       transform: translateX(0);
       width: fit-content;
-      top: -5%;
-      left: 36%;
       background: none;
+      height: min-content;
+      margin-top: 0;
 
       i {
         display: none;
@@ -606,6 +606,7 @@ footer {
 
       ul {
         flex-direction: row;
+        margin: 0;
 
         li {
           &:hover {

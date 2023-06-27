@@ -494,19 +494,21 @@ footer .content .copyrights .legal a {
     display: inherit;
   }
   header .menu {
-    position: fixed;
+    position: relative;
     transform: translateX(0);
     width: -moz-fit-content;
     width: fit-content;
-    top: -5%;
-    left: 36%;
     background: none;
+    height: -moz-min-content;
+    height: min-content;
+    margin-top: 0;
   }
   header .menu i {
     display: none;
   }
   header .menu ul {
     flex-direction: row;
+    margin: 0;
   }
   header .menu ul li:hover {
     background: rgba(0, 0, 0, 0.1647058824);
