@@ -17,7 +17,6 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-header .menu,
 header .language {
   display: none;
 }
@@ -29,6 +28,40 @@ header .logo img {
   width: 50%;
   height: 50%;
 }
+header .menu {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 75%;
+  transition: 0.5s ease-in-out;
+  transform: translateX(-102%);
+  height: 100vh;
+  background: #0ac6ff;
+}
+header .menu i {
+  position: fixed;
+  right: 10%;
+  top: 4%;
+}
+header .menu ul {
+  margin: 5em 1em;
+  display: flex;
+  flex-direction: column;
+}
+header .menu ul li {
+  list-style: none;
+}
+header .menu ul li:hover {
+  background: rgba(10, 198, 255, 0.4039215686);
+}
+header .menu ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0.75em 1em;
+  display: block;
+}
 
 section.hero {
   margin-top: 2em;
@@ -38,7 +71,7 @@ section.hero {
 section.hero .content {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 section.hero .content h1 {
   line-height: 1.4;
@@ -52,6 +85,7 @@ section.hero .content h1 .bold-black {
 }
 section.hero .content p {
   margin-top: 1em;
+  line-height: 1.4;
 }
 section.hero .content .links {
   display: flex;
@@ -85,7 +119,7 @@ section.hero .content .links .btn-2 img {
 }
 section.hero .content img {
   width: 100%;
-  height: 100%;
+  height: 80%;
 }
 section.hero .stats {
   margin: 1.7em 0;
@@ -108,6 +142,12 @@ section.mindset {
 }
 section.mindset div {
   margin: 1.5em 0;
+}
+section.mindset .mindset-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 section.mindset .mindset-desc {
   margin-top: 4em;
@@ -133,6 +173,14 @@ section.features .feature-item {
   padding: 2em 0;
   display: flex;
   flex-wrap: wrap;
+}
+section.features .feature-item .feature-item-desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.features .feature-item .feature-item-desc .inner {
+  width: 80%;
 }
 section.features .feature-item .heading {
   margin: 1.2em 0;
@@ -168,10 +216,11 @@ section.features .feature-item .btn a {
   text-decoration: none;
 }
 section.features .feature-item img {
-  height: 100%;
-  width: 100%;
+  height: 80%;
+  width: 80%;
 }
-section.features .feature-item .feature-item-image {
+section.features .feature-item .feature-item-image,
+section.features .feature-item .feature-item-desc {
   width: 100%;
 }
 section.features .feature-item-1 .feature-item-desc .heading,
@@ -182,6 +231,12 @@ section.features .feature-item-1 .feature-item-desc .heading span,
 section.features .feature-item-3 .feature-item-desc .heading span {
   color: #666d72;
 }
+section.features .feature-item-1 .feature-item-image,
+section.features .feature-item-3 .feature-item-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
 section.features .feature-item-1 .btn {
   background: #0ac6ff;
 }
@@ -190,6 +245,9 @@ section.features .feature-item-1 .btn a {
 }
 section.features .feature-item-1 .feature-item-image {
   background: #0ac6ff;
+}
+section.features .feature-item-2 .feature-item-image img {
+  width: 100%;
 }
 section.features .feature-item-2 .feature-item-desc .heading {
   background: #fcf6e7;
@@ -263,6 +321,9 @@ section.downloads .content .heading span {
   color: #007acc;
   font-weight: 400;
 }
+section.downloads .content .content-desc {
+  text-align: center;
+}
 section.downloads .content .content-desc h1 {
   margin: 1em 0;
 }
@@ -304,6 +365,8 @@ section.downloads .content .content-footer .app-store {
 section.form {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 section.form .heading {
   margin: 1em 0;
@@ -346,6 +409,15 @@ section.form form .phone-control .phone-icon {
   top: 53%;
   right: 0;
 }
+section.form form .submit-btn {
+  padding: 1em 0;
+  margin: 1em 0;
+  background: #0ac6ff;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1em;
+}
 section.form .map {
   display: none;
 }
@@ -353,18 +425,29 @@ section.form .map {
 footer {
   background: #000c14;
   color: #fff;
-  padding: 3em 0;
-  min-height: 33em;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: flex-start;
 }
-footer .content,
+footer .logo {
+  margin-top: 1em;
+}
 footer .content h1,
 footer .content .content-footer {
   margin: 1em 0;
 }
+footer .content {
+  margin-top: 0;
+}
+footer .content h1 {
+  font-size: 1.5em;
+}
+footer .content p .text {
+  line-height: 1.875em;
+  font-size: 1em;
+}
 footer .content .content-footer {
+  margin: 2.5em 0;
   display: flex;
 }
 footer .content .content-footer .btn {
@@ -391,4 +474,268 @@ footer .content .content-footer .google-play .upper-text {
 footer .content .content-footer .app-store {
   background: #007acc;
   color: #fff;
+}
+footer .content .copyrights .content {
+  margin: 1em 0;
+}
+footer .content .copyrights .legal {
+  margin: 2em 0;
+  display: flex;
+  justify-content: flex-start;
+}
+footer .content .copyrights .legal a {
+  text-decoration: none;
+  color: inherit;
+  margin-right: 1em;
+}
+
+@media only screen and (min-width: 720px) {
+  header .language {
+    display: inherit;
+  }
+  header .menu {
+    position: relative;
+    transform: translateX(0);
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background: none;
+  }
+  header .menu i {
+    display: none;
+  }
+  header .menu ul {
+    flex-direction: row;
+  }
+  header .menu ul li:hover {
+    background: rgba(0, 0, 0, 0.1647058824);
+  }
+  header .menu ul li a {
+    color: #000;
+    text-transform: initial;
+  }
+  header .hamburger,
+  header .notifs {
+    display: none;
+  }
+  header .language select {
+    padding: 1em;
+    border-radius: 8px;
+    background: #f2f3f3;
+    border: none;
+  }
+  section.hero {
+    position: relative;
+  }
+  section.hero .content {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  section.hero .content .hero-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    min-height: 35em;
+  }
+  section.hero .content .hero-img {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  section.hero .content img {
+    width: 100%;
+    height: 100%;
+  }
+  section.hero .content .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section.hero .content .links div {
+    width: 50%;
+    padding: 1em 1.5em;
+    margin-top: 1.8em;
+  }
+  section.hero .stats {
+    position: absolute;
+    top: 75%;
+    left: 0;
+  }
+  section.hero .stats div {
+    margin: 2em;
+  }
+  section.hero .stats div h4 {
+    font-size: 1.75em;
+  }
+  section.hero .stats div p {
+    font-size: 1em;
+  }
+  section.mindset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    background: #000c14;
+  }
+  section.mindset div {
+    margin: 1.5em 0;
+  }
+  section.mindset .mindset-desc {
+    width: 60%;
+    margin-left: 2em;
+    margin-top: 0;
+  }
+  section.mindset .mindset-desc p {
+    font-size: 1.5em;
+  }
+  section.mindset img {
+    width: 100%;
+    height: 120%;
+  }
+  section.features .feature-item {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  section.features .feature-item .feature-item-desc,
+  section.features .feature-item .feature-item-image {
+    height: 30em;
+  }
+  section.features .feature-item h1 {
+    font-size: 2em;
+  }
+  section.features .feature-item p {
+    font-size: 1em;
+  }
+  section.features .feature-item .btn {
+    width: 21.313em;
+  }
+  section.features .feature-item .feature-item-desc,
+  section.features .feature-item .feature-item-image {
+    width: 50%;
+  }
+  section.features .feature-item .feature-item-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section.features .feature-item .feature-item-desc .inner {
+    width: 80%;
+  }
+  section.features .feature-item-1 .feature-item-image,
+  section.features .feature-item-3 .feature-item-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  section.features .feature-item-1 img,
+  section.features .feature-item-3 img {
+    height: 50%;
+    width: 60%;
+  }
+  section.features .feature-item-2 {
+    flex-direction: row-reverse;
+  }
+  section.features .feature-item-2 .feature-item-image img {
+    height: 30em;
+    width: 100%;
+  }
+  section.downloads {
+    position: relative;
+    margin-bottom: 2em;
+  }
+  section.downloads .miniature {
+    position: absolute;
+  }
+  section.downloads .miniature .large {
+    display: flex;
+    width: 70%;
+  }
+  section.downloads .miniature .small {
+    display: none;
+  }
+  section.downloads .miniature-1-1 {
+    top: 15%;
+    left: 10%;
+  }
+  section.downloads .miniature-2-1 {
+    top: 12%;
+    right: 20%;
+  }
+  section.downloads .miniature-3-1 {
+    top: 23%;
+    right: 0;
+  }
+  section.downloads .miniature-4-1 {
+    top: 80%;
+    right: 5%;
+  }
+  section.downloads .miniature-5-1 {
+    top: 90%;
+    right: 30%;
+  }
+  section.downloads .miniature-6-1 {
+    top: 78%;
+    left: 8%;
+  }
+  section.downloads .miniature-7-1 {
+    top: 35%;
+    left: 0;
+  }
+  section.downloads .content .content-desc h1 {
+    font-size: 2em;
+  }
+  section.form {
+    display: flex;
+    flex-wrap: nowrap;
+    max-height: 45em;
+  }
+  section.form form {
+    margin: 1em 0;
+    height: 100%;
+  }
+  section.form .map {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+  }
+  section.form .map img {
+    width: 80%;
+    height: 70%;
+  }
+  footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .content .content-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .content .content-footer .btn {
+    align-items: center;
+  }
+  footer .content .copyrights {
+    display: flex;
+    justify-content: space-between;
+  }
 }/*# sourceMappingURL=main.css.map */
