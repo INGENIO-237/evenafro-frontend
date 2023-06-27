@@ -1,10 +1,6 @@
-import express from "express";
-import dotenv from "dotenv";
-import layouts from "express-ejs-layouts";
-import main from "./routes/main";
-
-// Envireonment variables
-dotenv.config();
+const express = require("express");
+require("dotenv").config();
+const layouts = require("express-ejs-layouts");
 
 // Initialize app
 const app = express();
@@ -17,16 +13,15 @@ app.use(express.urlencoded({ extended: false }));
 
 // Define default layout and templating
 app.set("view engine", "ejs");
-app.set("views", __dirname + "/views");
 
 // Static files
-app.use(express.static(__dirname + "/public"));
+app.use(express.static("/public"));
 
 // app.set("views")
 app.use(layouts);
 
 // Routes
-app.use("", main);
+app.use("", require("./routes/main"));
 
 // Launch app
 app.listen(PORT, () => {
