@@ -26,8 +26,8 @@ header {
     justify-content: center;
 
     img {
-      width: 150%;
-      height: 150%;
+      width: 90%;
+      height: 90%;
     }
   }
 
@@ -176,6 +176,12 @@ section.mindset {
     margin-top: 4em;
     color: #fff;
     text-align: justify;
+
+    p{
+      font-size: 1em;
+      text-align: justify;
+      margin: 1.5em 0;
+    }
 
     .heading {
       margin: 1.5em 0;
@@ -710,10 +716,6 @@ footer {
       width: 60%;
       margin-left: 2em;
       margin-top: 0;
-
-      p {
-        font-size: 1.5em;
-      }
     }
 
     img {
