@@ -28,7 +28,7 @@ $("#contactForm").submit((e) => {
   });
 
   $.ajax({
-    url: "http://192.168.100.7:5000/api/1.0/send-email",
+    url: "http://15.223.117.232:5000/api/1.0/send-email",
     type: "POST",
     data: infos,
     success: (response) => {

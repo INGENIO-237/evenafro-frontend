@@ -30,8 +30,8 @@ header {
     justify-content: center;
 
     img {
-      width: 90%;
-      height: 90%;
+      width: 80%;
+      height: 100%;
     }
   }
 
@@ -644,6 +644,13 @@ footer {
   header {
     .language {
       display: inherit;
+    }
+
+    .logo{
+      img{
+        height: 100%;
+        width: 80%;
+      }
     }
 
     .menu {

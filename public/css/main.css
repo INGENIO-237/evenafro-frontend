@@ -29,8 +29,8 @@ header .logo {
   justify-content: center;
 }
 header .logo img {
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  height: 100%;
 }
 header .menu {
   position: fixed;
@@ -540,6 +540,10 @@ footer .content .copyrights .legal a {
 @media only screen and (min-width: 720px) {
   header .language {
     display: inherit;
+  }
+  header .logo img {
+    height: 100%;
+    width: 80%;
   }
   header .menu {
     position: relative;
