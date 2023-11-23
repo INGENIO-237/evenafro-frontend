@@ -1,50 +1,85 @@
-<section class="hero custom-wrapper">
-  <div class="content">
-    <div class="hero-desc">
-      <h1>
-        EVENAFRO : UNE APPLICATION GRATUITE ET CONVIVIALE SPÉCIALEMENT CONÇUE
-        POUR
-        <span class="blue"
-          >LA COMMUNAUTÉ AFRODESCENDANTE ET LA DIVERSITÉ ETHNO-CULTURELLE</span
-        >
-        QUI LOCALISE EN TEMPS RÉEL <span class="bold-black"
-          >TOUS LES ÉVÉNEMENTS À PROXIMITÉ.</span
-        >
-      </h1>
-      <p>
-        Ne manquez aucun événement ni sortie dans votre région grâce à
-        l'application EVENAFRO ! Trouvez facilement tous les événements qui vous
-        intéressent et partagez gratuitement vos propres événements.
-      </p>
-      <div class="links">
-        <div class="btn-1">
-          <a href="">Lancez-vous maintenant </a>
-        </div>
-        <div class="btn-2">
-          <a href=""
-            ><img src="/images/android.png" alt="android" />&nbsp;Download for
-            android
-          </a>
-        </div>
-        <a href=""></a>
+<link rel="stylesheet" href="/css/index.css" />
+
+<style>
+  
+</style>
+
+<section class="hero">
+  <div id="video-container">
+    <header class="custom-wrapper">
+      <div class="hamburger">
+        <i class="fa-solid fa-bars" style="color: #ffffff"></i>
       </div>
-    </div>
-    <div class="hero-img">
+      <div class="logo">
+        <img src="/images/logo.png" alt="EVENAFRO LOGO" />
+      </div>
+      <nav class="menu">
+        <i class="fa-solid fa-2xl fa-xmark close" style="color: #ffffff"></i>
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/how-it-works">Comment ça marche</a></li>
+          <li><a href="#form">Contactez-nous</a></li>
+        </ul>
+      </nav>
+      <div class="notifs">
+        <i class="fa-solid fa-bell" style="color: #ffffff"></i>
+      </div>
+      <div class="language">
+        <select name="lang" id="lang">
+          <option value="french">Français</option>
+          <option value="english">Anglais</option>
+        </select>
+      </div>
+    </header>
+    <video id="video-background" autoplay muted loop>
+      <source src="/videos/video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div id="rest">
+      <div class="content">
+        <div class="hero-desc">
+          <h1>
+            Saisissez l'instant avec Evenafro ! Ne ratez plus aucun événement
+            local.
+            <span class="blue">Découvrez, partagez, célébrez.</span>
+            <span>Votre communauté, vos événements, votre application.</span>
+          </h1>
+          <p>
+            Découvrez l'univers vibrant d'Evenafro : une application gratuite et
+            conviviale pensée exclusivement pour la communauté afrodescendante
+            et la diversité ethno-culturelle. Plongez dans une expérience unique
+            où chaque événement à proximité est localisé en temps réel.
+          </p>
+          <div class="links">
+            <div class="button btn-1">
+              <span>Lancez-vous maintenant</span>
+            </div>
+            <div class="button btn-2">
+              <img src="/images/android.png" alt="android" /><span>
+                Download for android
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="hero-img">
       <img src="/images/hero-image.png" alt="Hero image" />
-    </div>
-  </div>
-  <div class="stats">
-    <div>
-      <h4>7800+</h4>
-      <p>Téléchargements</p>
-    </div>
-    <div>
-      <h4>500k+</h4>
-      <p>Utilisateurs</p>
-    </div>
-    <div>
-      <h4>65k+</h4>
-      <p>Annonces</p>
+    </div> -->
+      </div>
+      <div class="stats">
+        <div>
+          <h4 id="telechargements">0</h4>
+          <p>Téléchargements</p>
+        </div>
+        <div>
+          <h4 id="utilisateurs">500k+</h4>
+          <p>Utilisateurs</p>
+        </div>
+        <div>
+          <h4 id="annonces">65k+</h4>
+          <p>Annonces</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -52,17 +87,20 @@
 <section class="mindset custom-wrapper">
   <div class="mindset-desc">
     <div class="heading">
-      <span>EVENAFRO, une application de géolocalisation en temps réel.</span>
+      <span
+        >Des événements selon vos envies, qui éveilleront toutes vos
+        passions</span
+      >
     </div>
-    <p>Expérience immersive et culturellement riche garantie !</p>
-    <p>
-      Créez une connexion authentique et enrichissante avec une diversité
-      ethno-culturelle passionnante. Découvrez des expériences uniques,
-      engageantes et culturellement riches grâce à cette application
-      révolutionnaire. Connectez-vous avec la communauté Afrodescendante et
-      découvrez des opportunités d'épanouissement culturel.
+    <p class="mindset-text">
+      Fêtes locales, divertissements, culture et arts, musiques et livres,
+      réseautages et conférences, promotions et rabais, inaugurations,
+      lancements et services professionnels, Spectacles, Concerts, Karaokés,
+      Expositions, Salons, Évènements sportifs, Gamer et jeux, Évènements pour
+      enfants, Vide-greniers, Rifles et lotos, ; Festivals, Feux d'artifice,
+      Danse et initiations, Soirées célibataires Et bien plus encore...
     </p>
-    <p>
+    <p class="mindset-text">
       Téléchargez dès maintenant cette application pour une immersion totale
       dans un univers fascinant.
     </p>
@@ -79,25 +117,26 @@
         <div class="heading">
           <span>Un produit adapté à vos besoins</span>
         </div>
-        <h1>
-          Les événements disponibles sur EVENAFRO, il y en a pour tous les goûts
-          et toutes les envies !
-        </h1>
+        <h1>Connexion Communautaire culturelle, riche et immersive</h1>
         <p>
-          Fêtes , divertissements, culture et arts, musiques et livres,
-          réseautages et conférences, promotions et rabais, inaugurations,
-          lancements et services professionnels. Ne manquez pas les événements
-          qui vous feront vibrer ! <br /><br />
-          Que ce soit aujourd'hui, ce week-end ou à tout moment, EVENAFRO vous
-          propose une sélection d'événements à ne pas manquer. <br /><br />
+          Créez une connexion authentique, significative et enrichissante avec
+          une diversité ethno-culturelle passionnante. Explorez des expériences
+          uniques, engageantes et culturellement riches grâce à Evenafro.
+          Connectez-vous avec la communauté Afrodescendante et découvrez des
+          opportunités géniales pour enrichir votre vie culturelle. Venez vivre
+          des moments inoubliables !
         </p>
-        <div class="btn">
+        <div class="button btn">
           <a href="">Lancez-vous</a>
         </div>
       </div>
     </div>
     <div class="feature-item-image">
-      <img src="/images/feature-1.png" alt="feature-1" />
+      <img
+          class="responsive-image"
+          src="/images/feature-1.png"
+          alt="feature-1"
+        />
     </div>
   </div>
   <div class="feature-item feature-item-2 reversed">
@@ -106,23 +145,25 @@
         <div class="heading">
           <span>Un produit adapté à votre identité</span>
         </div>
-        <h1>Pour tout le monde !</h1>
+        <h1>Nous avons pensé à tout</h1>
         <p>
-          Ce n'est pas tout ! vous pouvez faire des dons pour aider votre
-          communauté dans la section Donations du moments. <br /><br />
-
-          Que vous soyez vous-même un entrepreneur immigrant en herbe ou
-          simplement en quête d'inspiration, la section Inspirations du moment
-          vous encourage à croire en vos capacités et à persévérer malgré les
-          défis.
+          Vous avez la possibilité de faire un geste et de soutenir votre
+          communauté dans la section Donations du moment. Que vous soyez un
+          futur entrepreneur immigrant ou simplement en quête d'inspiration, la
+          section Inspirations du moment vous pousse à croire en vous et à
+          persévérer face aux défis. C'est votre moment.
         </p>
-        <div class="btn">
+        <div class="button btn">
           <a href="">Lancez-vous</a>
         </div>
       </div>
     </div>
     <div class="feature-item-image">
-      <img src="/images/feature-2.jpg" alt="feature-1" />
+      <img
+          class="responsive-image"
+          src="/images/feature-2.png"
+          alt="feature-1"
+        />
     </div>
   </div>
   <div class="feature-item feature-item-3">
@@ -137,13 +178,17 @@
           par ces modèles de réussite et vous motiver à réaliser vos propres
           aspirations entrepreneuriales.
         </p>
-        <div class="btn">
+        <div class="button btn">
           <a href="">Lancez-vous</a>
         </div>
       </div>
     </div>
     <div class="feature-item-image">
-      <img src="/images/feature-3.png" alt="feature-1" />
+      <img
+          class="responsive-image"
+          src="/images/feature-3.png"
+          alt="feature-1"
+        />
     </div>
   </div>
 </section>
@@ -184,11 +229,12 @@
     <div class="content-desc">
       <h1>Qu'attendez-vous ?</h1>
       <p>
-        Ne perdez plus de temps et rejoignez-nous pour vivre l'émotion que vous méritez.
+        Ne perdez plus de temps et rejoignez-nous pour vivre l'émotion que vous
+        méritez.
       </p>
     </div>
     <div class="content-footer">
-      <div class="btn google-play">
+      <div class="button btn google-play">
         <div>
           <img src="/images/google-play.png" alt="Google Play" />
         </div>
@@ -197,7 +243,7 @@
           <p class="lower-text">Google Play</p>
         </div>
       </div>
-      <div class="btn app-store">
+      <div class="button btn app-store">
         <div>
           <img src="/images/app-store.png" alt="App Store" />
         </div>
@@ -216,32 +262,32 @@
       <h1>Ensemble, faisons briller votre marque</h1>
     </div>
     <div>
-      <form action="">
+      <form id="contactForm">
         <div class="input-group">
           <label for="">Prénom</label>
-          <input type="text" placeholder="" class="form-control" />
+          <input type="text" placeholder="" name="firstName" id="firstName" class="form-control" />
         </div>
         <div class="input-group">
           <label for="">Nom</label>
-          <input type="text" placeholder="" class="form-control" />
+          <input type="text" placeholder="" name="lastName" id="lastName" class="form-control" />
         </div>
         <div class="input-group">
           <label for="">Adresse Email</label>
-          <input type="email" placeholder="" class="form-control" />
+          <input type="email" placeholder="" name="email" id="email" class="form-control" />
         </div>
         <div class="input-group phone-control">
           <label for="">Téléphone</label>
-          <input type="tel" placeholder="" class="form-control" />
+          <input type="tel" placeholder="" name="phone" id="phone" class="form-control" />
           <div class="phone-icon">
             <i class="fa-solid fa-phone"></i>
           </div>
         </div>
         <div class="input-group">
           <label for="">Message</label>
-          <textarea placeholder="" class="form-control" cols="20"></textarea>
+          <textarea placeholder="" class="form-control" name="message" id="message" cols="20"></textarea>
         </div>
         <div class="input-group">
-          <input type="submit" value="Envoyer" class="submit-btn" />
+          <input type="submit" value="Envoyer" id="sendBtn" class="submit-btn button" />
         </div>
       </form>
     </div>
@@ -250,3 +296,6 @@
     <img src="/images/map.png" alt="" />
   </div>
 </section>
+
+<script src="/js/stats.js"></script>
+<script src="/js/send-email.js"></script>

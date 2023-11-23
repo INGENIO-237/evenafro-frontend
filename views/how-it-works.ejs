@@ -203,39 +203,38 @@
     </div>
   </div>
 </section>
-
 <section class="form" id="form">
   <div class="form-content custom-wrapper">
     <div class="heading">
       <h1>Ensemble, faisons briller votre marque</h1>
     </div>
     <div>
-      <form action="">
+      <form id="contactForm">
         <div class="input-group">
           <label for="">Prénom</label>
-          <input type="text" placeholder="" class="form-control" />
+          <input type="text" placeholder="" name="firstName" id="firstName" class="form-control" />
         </div>
         <div class="input-group">
           <label for="">Nom</label>
-          <input type="text" placeholder="" class="form-control" />
+          <input type="text" placeholder="" name="lastName" id="lastName" class="form-control" />
         </div>
         <div class="input-group">
           <label for="">Adresse Email</label>
-          <input type="email" placeholder="" class="form-control" />
+          <input type="email" placeholder="" name="email" id="email" class="form-control" />
         </div>
         <div class="input-group phone-control">
           <label for="">Téléphone</label>
-          <input type="tel" placeholder="" class="form-control" />
+          <input type="tel" placeholder="" name="phone" id="phone" class="form-control" />
           <div class="phone-icon">
             <i class="fa-solid fa-phone"></i>
           </div>
         </div>
         <div class="input-group">
           <label for="">Message</label>
-          <textarea placeholder="" class="form-control" cols="20"></textarea>
+          <textarea placeholder="" class="form-control" name="message" id="message" cols="20"></textarea>
         </div>
         <div class="input-group">
-          <input type="submit" value="Envoyer" class="submit-btn" />
+          <input type="submit" value="Envoyer" id="sendBtn" class="submit-btn button" />
         </div>
       </form>
     </div>
@@ -244,3 +243,5 @@
     <img src="/images/map.png" alt="" />
   </div>
 </section>
+
+<script src="/js/send-email.js"></script>

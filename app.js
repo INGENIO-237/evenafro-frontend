@@ -1,12 +1,11 @@
 const express = require("express");
-require("dotenv").config();
 const layouts = require("express-ejs-layouts");
 
 // Initialize app
 const app = express();
 
 // Set PORT
-const PORT = process.env.PORT || 5000;
+const PORT = 10000;
 
 // Accept multi-form data
 app.use(express.urlencoded({ extended: false }));
