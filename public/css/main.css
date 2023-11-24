@@ -772,8 +772,25 @@ footer .content .copyrights .legal a {
     align-items: center;
   }
   footer .content .copyrights {
+    width: 80%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2em;
+  }
+  footer .content .copyrights .content {
+    margin: 0;
+    width: 20%;
+  }
+  footer .content .copyrights .legal {
+    width: 80%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  footer .content .copyrights .legal a {
+    text-decoration: none;
+    color: inherit;
+    margin-right: 1em;
   }
 }
 @keyframes movePhone {

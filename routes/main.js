@@ -12,5 +12,8 @@ router.get("/how-it-works", (req, res) => {
 router.get("/policies", (req, res) => {
   res.render("policies");
 });
+router.get("/cookies", (req, res) => {
+  res.render("cookies");
+});
 
 module.exports = router;
