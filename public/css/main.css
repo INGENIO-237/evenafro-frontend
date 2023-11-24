@@ -5,6 +5,7 @@
 
 body {
   font-family: "Sora";
+  overflow-y: unset;
 }
 
 .custom-wrapper {
@@ -13,6 +14,31 @@ body {
 
 .button {
   cursor: pointer;
+}
+
+.google-play:hover,
+.app-store:hover {
+  transform: translateY(-5px);
+}
+
+.google-play {
+  background: #000c14;
+  color: #fff;
+  margin-right: 1em;
+}
+.google-play .upper-text {
+  text-transform: uppercase;
+}
+
+.google-play,
+.app-store {
+  display: flex;
+  align-items: center;
+}
+
+.app-store {
+  background: #007acc;
+  color: #fff;
 }
 
 header {
@@ -104,43 +130,18 @@ section.hero .content .links a {
   text-decoration: none;
   font-weight: bold;
 }
-section.hero .content .links div {
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 1em;
-  text-align: center;
-  border-radius: 30px;
+section.hero .content .links .button {
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
   height: -moz-fit-content;
   height: fit-content;
-  margin-left: 1em;
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-size: 0.6em;
 }
-section.hero .content .links .btn-1 {
-  background: #0ac6ff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-section.hero .content .links .btn-1:hover {
-  transform: translateY(-5px);
-}
-section.hero .content .links .btn-2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background: #cecece;
-}
-section.hero .content .links .btn-2 img {
-  width: 20px;
-  height: 20px;
-}
-section.hero .content .links .btn-2:hover {
-  transform: translateY(-5px);
-}
-section.hero .content img {
-  width: 100%;
-  height: 80%;
+section.hero .content .links .button div:nth-child(1) {
+  margin-right: 1.5em;
 }
 section.hero .stats {
   margin: 1.7em 0;
@@ -384,22 +385,6 @@ section.downloads .content .content-footer .btn img {
 section.downloads .content .content-footer .btn .upper-text {
   font-size: 10px;
 }
-section.downloads .content .content-footer .google-play:hover,
-section.downloads .content .content-footer .app-store:hover {
-  transform: translateY(-5px);
-}
-section.downloads .content .content-footer .google-play {
-  background: #000c14;
-  color: #fff;
-  margin-right: 1em;
-}
-section.downloads .content .content-footer .google-play .upper-text {
-  text-transform: uppercase;
-}
-section.downloads .content .content-footer .app-store {
-  background: #007acc;
-  color: #fff;
-}
 
 section.form {
   display: flex;
@@ -615,8 +600,6 @@ footer .content .copyrights .legal a {
   section.hero .content .links div {
     width: -moz-fit-content;
     width: fit-content;
-    padding: 1em 1.5em;
-    margin-top: 1.8em;
   }
   section.hero .stats {
     position: absolute;

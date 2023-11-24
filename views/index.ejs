@@ -1,8 +1,6 @@
 <link rel="stylesheet" href="/css/index.css" />
 
-<style>
-  
-</style>
+<style></style>
 
 <section class="hero">
   <div id="video-container">
@@ -18,6 +16,7 @@
         <ul>
           <li><a href="/">Accueil</a></li>
           <li><a href="/how-it-works">Comment ça marche</a></li>
+          <li><a href="/how-it-works">Nos Tarifs</a></li>
           <li><a href="#form">Contactez-nous</a></li>
         </ul>
       </nav>
@@ -52,13 +51,31 @@
             où chaque événement à proximité est localisé en temps réel.
           </p>
           <div class="links">
-            <div class="button btn-1">
+            <!-- <div class="button btn-1">
               <span>Lancez-vous maintenant</span>
             </div>
             <div class="button btn-2">
               <img src="/images/android.png" alt="android" /><span>
                 Download for android
               </span>
+            </div> -->
+            <div class="button btn-1 google-play">
+              <div>
+                <img src="/images/google-play.png" alt="Google Play" />
+              </div>
+              <div>
+                <p class="upper-text">Obtenez l'application sur</p>
+                <p class="lower-text">Google Play</p>
+              </div>
+            </div>
+            <div class="button btn-2 app-store">
+              <div>
+                <img src="/images/app-store.png" alt="App Store" />
+              </div>
+              <div>
+                <p class="upper-text">Téléchargez l'application sur</p>
+                <p class="lower-text">App Store</p>
+              </div>
             </div>
           </div>
         </div>
@@ -131,12 +148,12 @@
         </div>
       </div>
     </div>
-    <div class="feature-item-image">
+    <div class="feature-item-image" id="image-1">
       <img
-          class="responsive-image"
-          src="/images/feature-1.png"
-          alt="feature-1"
-        />
+        class="responsive-image fade-in"
+        src="/images/feature-1.png"
+        alt="feature-1"
+      />
     </div>
   </div>
   <div class="feature-item feature-item-2 reversed">
@@ -158,12 +175,12 @@
         </div>
       </div>
     </div>
-    <div class="feature-item-image">
+    <div class="feature-item-image" id="image-2">
       <img
-          class="responsive-image"
-          src="/images/feature-2.png"
-          alt="feature-1"
-        />
+        class="responsive-image fade-in-reverse"
+        src="/images/feature-2.png"
+        alt="feature-2"
+      />
     </div>
   </div>
   <div class="feature-item feature-item-3">
@@ -183,12 +200,12 @@
         </div>
       </div>
     </div>
-    <div class="feature-item-image">
+    <div class="feature-item-image" id="image-3">
       <img
-          class="responsive-image"
-          src="/images/feature-3.png"
-          alt="feature-1"
-        />
+        class="responsive-image fade-in"
+        src="/images/feature-3.png"
+        alt="feature-3"
+      />
     </div>
   </div>
 </section>
@@ -265,29 +282,64 @@
       <form id="contactForm">
         <div class="input-group">
           <label for="">Prénom</label>
-          <input type="text" placeholder="" name="firstName" id="firstName" class="form-control" />
+          <input
+            type="text"
+            placeholder=""
+            name="firstName"
+            id="firstName"
+            class="form-control"
+          />
         </div>
         <div class="input-group">
           <label for="">Nom</label>
-          <input type="text" placeholder="" name="lastName" id="lastName" class="form-control" />
+          <input
+            type="text"
+            placeholder=""
+            name="lastName"
+            id="lastName"
+            class="form-control"
+          />
         </div>
         <div class="input-group">
           <label for="">Adresse Email</label>
-          <input type="email" placeholder="" name="email" id="email" class="form-control" />
+          <input
+            type="email"
+            placeholder=""
+            name="email"
+            id="email"
+            class="form-control"
+          />
         </div>
         <div class="input-group phone-control">
           <label for="">Téléphone</label>
-          <input type="tel" placeholder="" name="phone" id="phone" class="form-control" />
+          <input
+            type="tel"
+            placeholder=""
+            name="phone"
+            id="phone"
+            class="form-control"
+          />
           <div class="phone-icon">
             <i class="fa-solid fa-phone"></i>
           </div>
         </div>
         <div class="input-group">
           <label for="">Message</label>
-          <textarea placeholder="" class="form-control" name="message" id="message" cols="20"></textarea>
+          <textarea
+            placeholder=""
+            class="form-control"
+            name="message"
+            id="message"
+            cols="20"
+          ></textarea>
         </div>
         <div class="input-group">
-          <input type="submit" value="Envoyer" id="sendBtn" class="submit-btn button" />
+          <input
+            type="submit"
+            value="Envoyer"
+            id="sendBtn"
+            class="submit-btn button"
+          />
         </div>
       </form>
     </div>
@@ -299,3 +351,4 @@
 
 <!-- <script src="/js/stats.js"></script> -->
 <script src="/js/send-email.js"></script>
+<script src="/js/images.js"></script>

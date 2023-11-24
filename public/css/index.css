@@ -91,6 +91,22 @@ header .menu ul li a {
   display: block;
 }
 
+.fade-in, .fade-in-reverse {
+  transition: transform 0.5s ease-in-out;
+}
+
+.fade-in-reverse {
+  transform: translateX(-200%);
+}
+
+.fade-in {
+  transform: translateX(200%);
+}
+
+.fade-in.visible, .fade-in-reverse.visible {
+  transform: translateX(0);
+}
+
 @media only screen and (min-width: 720px) {
   header .language {
     display: inherit;
