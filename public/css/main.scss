@@ -943,8 +943,26 @@ footer {
       }
 
       .copyrights {
+        width: 80%;
         display: flex;
         justify-content: space-between;
+        margin-bottom: 2em;
+
+        .content {
+          margin: 0;
+          width: 20%;
+        }
+        .legal {
+          width: 80%;
+          margin: 0;
+          display: flex;
+          justify-content: flex-end;
+          a {
+            text-decoration: none;
+            color: inherit;
+            margin-right: 1em;
+          }
+        }
       }
     }
   }
