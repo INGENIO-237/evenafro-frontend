@@ -5,10 +5,40 @@
 
 body {
   font-family: "Sora";
+  overflow-y: unset;
 }
 
 .custom-wrapper {
   padding: 0 2em;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.google-play:hover,
+.app-store:hover {
+  transform: translateY(-5px);
+}
+
+.google-play {
+  background: #000c14;
+  color: #fff;
+  margin-right: 1em;
+}
+.google-play .upper-text {
+  text-transform: uppercase;
+}
+
+.google-play,
+.app-store {
+  display: flex;
+  align-items: center;
+}
+
+.app-store {
+  background: #007acc;
+  color: #fff;
 }
 
 header {
@@ -25,8 +55,8 @@ header .logo {
   justify-content: center;
 }
 header .logo img {
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  height: 100%;
 }
 header .menu {
   position: fixed;
@@ -64,17 +94,19 @@ header .menu ul li a {
 }
 
 section.hero {
-  margin-top: 2em;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 section.hero .content {
+  margin-top: 8em;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 section.hero .content h1 {
   line-height: 1.4;
+  text-transform: uppercase;
 }
 section.hero .content h1 .blue {
   color: #0ac6ff;
@@ -89,37 +121,27 @@ section.hero .content p {
 }
 section.hero .content .links {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-}
-section.hero .content .links div {
-  width: calc(100% - 3em);
-  padding: 1em 1.5em;
   margin-top: 1.8em;
-  text-align: center;
-  border-radius: 30px;
 }
-section.hero .content .links div a {
+section.hero .content .links a {
   text-decoration: none;
-  color: #000c14;
   font-weight: bold;
 }
-section.hero .content .links .btn-1 {
-  background: #0ac6ff;
-}
-section.hero .content .links .btn-2 {
+section.hero .content .links .button {
   display: flex;
-  justify-content: center;
   align-items: center;
+  border-radius: 6px;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-size: 0.6em;
 }
-section.hero .content .links .btn-2 img {
-  width: 20px;
-  height: 20px;
-}
-section.hero .content img {
-  width: 100%;
-  height: 80%;
+section.hero .content .links .button div:nth-child(1) {
+  margin-right: 1.5em;
 }
 section.hero .stats {
   margin: 1.7em 0;
@@ -139,6 +161,7 @@ section.mindset {
   align-items: center;
   flex-wrap: wrap;
   background: #000c14;
+  padding-top: 5em;
 }
 section.mindset div {
   margin: 1.5em 0;
@@ -153,6 +176,10 @@ section.mindset .mindset-desc {
   margin-top: 4em;
   color: #fff;
   text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 section.mindset .mindset-desc p {
   font-size: 1em;
@@ -164,7 +191,8 @@ section.mindset .mindset-desc .heading {
   background: rgba(0, 178, 234, 0.1019607843);
   padding: 0.7em;
   border-radius: 30px;
-  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 section.mindset .mindset-desc .heading span {
   color: #0ac6ff;
@@ -172,6 +200,7 @@ section.mindset .mindset-desc .heading span {
 section.mindset img {
   width: 100%;
   height: 120%;
+  animation: movePhone 1s alternate-reverse infinite;
 }
 
 section.features .feature-item {
@@ -220,6 +249,9 @@ section.features .feature-item .btn a {
   color: #fff;
   text-decoration: none;
 }
+section.features .feature-item .btn:hover {
+  transform: translateY(-5px);
+}
 section.features .feature-item img {
   height: 80%;
   width: 80%;
@@ -237,10 +269,12 @@ section.features .feature-item-3 .feature-item-desc .heading span {
   color: #666d72;
 }
 section.features .feature-item-1 .feature-item-image,
+section.features .feature-item-2 .feature-item-image,
 section.features .feature-item-3 .feature-item-image {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 }
 section.features .feature-item-1 .btn {
   background: #0ac6ff;
@@ -251,17 +285,14 @@ section.features .feature-item-1 .btn a {
 section.features .feature-item-1 .feature-item-image {
   background: #0ac6ff;
 }
-section.features .feature-item-2 .feature-item-image img {
-  width: 100%;
-}
 section.features .feature-item-2 .feature-item-desc .heading {
   background: #fcf6e7;
 }
 section.features .feature-item-2 .feature-item-desc .heading span {
   color: #f8724b;
 }
-section.features .feature-item-2 .feature-item-image img {
-  height: 20.321em;
+section.features .feature-item-2 .feature-item-image {
+  background-color: #e9c46a;
 }
 section.features .feature-item-3 .feature-item-image {
   background: #dcedf1;
@@ -354,18 +385,6 @@ section.downloads .content .content-footer .btn img {
 section.downloads .content .content-footer .btn .upper-text {
   font-size: 10px;
 }
-section.downloads .content .content-footer .google-play {
-  background: #000c14;
-  color: #fff;
-  margin-right: 1em;
-}
-section.downloads .content .content-footer .google-play .upper-text {
-  text-transform: uppercase;
-}
-section.downloads .content .content-footer .app-store {
-  background: #007acc;
-  color: #fff;
-}
 
 section.form {
   display: flex;
@@ -392,6 +411,7 @@ section.form form .input-group .form-control {
   height: 3em;
   border-radius: 12px;
   border: 2px solid #f2f3f3;
+  padding-left: 1em;
 }
 section.form form .input-group textarea {
   max-width: 100%;
@@ -422,6 +442,9 @@ section.form form .submit-btn {
   border-radius: 30px;
   font-weight: bold;
   font-size: 1em;
+}
+section.form form .submit-btn:hover {
+  transform: translateY(-5px);
 }
 section.form .map {
   display: none;
@@ -476,6 +499,11 @@ footer .content .content-footer .google-play {
 footer .content .content-footer .google-play .upper-text {
   text-transform: uppercase;
 }
+footer .content .content-footer .google-play:hover,
+footer .content .content-footer .app-store:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
 footer .content .content-footer .app-store {
   background: #007acc;
   color: #fff;
@@ -497,6 +525,10 @@ footer .content .copyrights .legal a {
 @media only screen and (min-width: 720px) {
   header .language {
     display: inherit;
+  }
+  header .logo img {
+    height: 100%;
+    width: 80%;
   }
   header .menu {
     position: relative;
@@ -521,6 +553,7 @@ footer .content .copyrights .legal a {
   header .menu ul li a {
     color: #000;
     text-transform: initial;
+    text-align: center;
   }
   header .hamburger,
   header .notifs {
@@ -536,6 +569,7 @@ footer .content .copyrights .legal a {
     position: relative;
   }
   section.hero .content {
+    margin-top: 25em;
     flex-direction: row;
     justify-content: space-evenly;
   }
@@ -546,6 +580,7 @@ footer .content .copyrights .legal a {
     align-items: center;
     width: 70%;
     min-height: 35em;
+    margin-top: -15em;
   }
   section.hero .content .hero-img {
     width: 50%;
@@ -563,14 +598,17 @@ footer .content .copyrights .legal a {
     align-items: center;
   }
   section.hero .content .links div {
-    width: 50%;
-    padding: 1em 1.5em;
-    margin-top: 1.8em;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   section.hero .stats {
     position: absolute;
     top: 75%;
     left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
   }
   section.hero .stats div {
     margin: 2em;
@@ -599,7 +637,7 @@ footer .content .copyrights .legal a {
   }
   section.mindset img {
     width: 100%;
-    height: 120%;
+    height: 40em;
   }
   section.features .feature-item {
     flex-direction: row;
@@ -610,7 +648,7 @@ footer .content .copyrights .legal a {
   }
   section.features .feature-item .feature-item-desc,
   section.features .feature-item .feature-item-image {
-    height: 30em;
+    height: 40em;
   }
   section.features .feature-item h1 {
     font-size: 2em;
@@ -619,7 +657,7 @@ footer .content .copyrights .legal a {
     font-size: 1em;
   }
   section.features .feature-item .btn {
-    width: 21.313em;
+    width: 80%;
   }
   section.features .feature-item .feature-item-desc,
   section.features .feature-item .feature-item-image {
@@ -633,24 +671,19 @@ footer .content .copyrights .legal a {
   section.features .feature-item .feature-item-desc .inner {
     width: 80%;
   }
-  section.features .feature-item-1 .feature-item-image,
-  section.features .feature-item-3 .feature-item-image {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  section.features .feature-item-1 img,
-  section.features .feature-item-3 img {
-    height: 50%;
-    width: 60%;
+  section.features .feature-item-1 .feature-item-image img,
+  section.features .feature-item-2 .feature-item-image img,
+  section.features .feature-item-3 .feature-item-image img {
+    height: 70%;
+    width: auto;
+    -o-object-fit: initial;
+       object-fit: initial;
   }
   section.features .feature-item-2 {
     flex-direction: row-reverse;
   }
-  section.features .feature-item-2 .feature-item-image img {
-    height: 30em;
-    width: 100%;
+  section.features .feature-item-2 .feature-item-image {
+    background-color: #e9c46a;
   }
   section.downloads {
     position: relative;
@@ -741,5 +774,13 @@ footer .content .copyrights .legal a {
   footer .content .copyrights {
     display: flex;
     justify-content: space-between;
+  }
+}
+@keyframes movePhone {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=main.css.map */
