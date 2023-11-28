@@ -44,73 +44,21 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  .language {
-    display: none;
-  }
-
-  .logo {
-    display: flex;
-    justify-content: center;
-
-    img {
-      width: 80%;
-      height: 120%;
-    }
-  }
-
-  .menu {
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 75%;
-    transition: 0.5s ease-in-out;
-    transform: translateX(-102%);
-    height: 100vh;
-    background: #0ac6ff;
-
-    i {
-      position: fixed;
-      right: 10%;
-      top: 4%;
-    }
-
-    ul {
-      margin: 5em 1em;
-      display: flex;
-      flex-direction: column;
-
-      li {
-        list-style: none;
-
-        &:hover {
-          background: #0ac6ff67;
-        }
-
-        a {
-          text-decoration: none;
-          text-transform: uppercase;
-          color: #fff;
-          padding: 0.75em 1em;
-          display: block;
-        }
-      }
-    }
-  }
 }
 
-.fade-in, .fade-in-reverse {
+.fade-in,
+.fade-in-reverse {
   transition: transform 0.5s ease-in-out;
 }
 .fade-in-reverse {
-  transform: translateX(-200%)
+  transform: translateX(-200%);
 }
 .fade-in {
   transform: translateX(200%);
 }
 
-.fade-in.visible, .fade-in-reverse.visible {
+.fade-in.visible,
+.fade-in-reverse.visible {
   transform: translateX(0);
 }
 
@@ -118,6 +66,12 @@ header {
   header {
     .language {
       display: inherit;
+    }
+    width: 90vw;
+
+    .logo{
+      width: 10%;
+      height: 80%;
     }
 
     .menu {
