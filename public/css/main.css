@@ -5,7 +5,7 @@
 
 body {
   font-family: "Sora";
-  overflow-y: unset;
+  overflow-x: hidden;
 }
 
 .custom-wrapper {
@@ -14,31 +14,6 @@ body {
 
 .button {
   cursor: pointer;
-}
-
-.google-play:hover,
-.app-store:hover {
-  transform: translateY(-5px);
-}
-
-.google-play {
-  background: #000c14;
-  color: #fff;
-  margin-right: 1em;
-}
-.google-play .upper-text {
-  text-transform: uppercase;
-}
-
-.google-play,
-.app-store {
-  display: flex;
-  align-items: center;
-}
-
-.app-store {
-  background: #007acc;
-  color: #fff;
 }
 
 header {
@@ -55,8 +30,7 @@ header .logo {
   justify-content: center;
 }
 header .logo img {
-  width: 80%;
-  height: 100%;
+  width: 50%;
 }
 header .menu {
   position: fixed;
@@ -99,13 +73,14 @@ section.hero {
   min-height: 100vh;
 }
 section.hero .content {
-  margin-top: 8em;
+  margin-top: 10em;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 section.hero .content h1 {
-  line-height: 1.4;
+  line-height: 1.6;
+  font-size: medium;
   text-transform: uppercase;
 }
 section.hero .content h1 .blue {
@@ -117,31 +92,45 @@ section.hero .content h1 .bold-black {
 }
 section.hero .content p {
   margin-top: 1em;
-  line-height: 1.4;
+  line-height: 1.6;
+  font-size: medium;
 }
-section.hero .content .links {
+section.hero .content .content-footer {
+  margin: 2.5em 0;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1.8em;
 }
-section.hero .content .links a {
-  text-decoration: none;
-  font-weight: bold;
-}
-section.hero .content .links .button {
+section.hero .content .content-footer .btn {
   display: flex;
   align-items: center;
   border-radius: 6px;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 3em;
   padding: 0.5em;
-  text-transform: uppercase;
-  font-size: 0.6em;
 }
-section.hero .content .links .button div:nth-child(1) {
-  margin-right: 1.5em;
+section.hero .content .content-footer .btn img {
+  margin-right: 0.5em;
+}
+section.hero .content .content-footer .btn .upper-text {
+  font-size: 10px;
+}
+section.hero .content .content-footer .btn p:nth-child(2) {
+  margin-top: 0;
+}
+section.hero .content .content-footer .google-play {
+  background: #fff;
+  color: #000;
+  margin-right: 1em;
+}
+section.hero .content .content-footer .google-play .upper-text {
+  text-transform: uppercase;
+}
+section.hero .content .content-footer .google-play:hover,
+section.hero .content .content-footer .app-store:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+section.hero .content .content-footer .app-store {
+  background: #007acc;
+  color: #fff;
 }
 section.hero .stats {
   margin: 1.7em 0;
@@ -459,6 +448,15 @@ footer {
 }
 footer .logo {
   margin-top: 1em;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+footer .logo img {
+  width: 50%;
+  height: 50%;
+  margin-left: -1em;
 }
 footer .content h1,
 footer .content .content-footer {
@@ -473,6 +471,12 @@ footer .content h1 {
 footer .content p .text {
   line-height: 1.875em;
   font-size: 1em;
+}
+footer .content .socials {
+  margin: 1em 0;
+}
+footer .content .socials a {
+  margin-right: 1em;
 }
 footer .content .content-footer {
   margin: 2.5em 0;
@@ -523,11 +527,16 @@ footer .content .copyrights .legal a {
 }
 
 @media only screen and (min-width: 720px) {
+  header {
+    width: 90vw;
+  }
   header .language {
     display: inherit;
   }
+  header .logo {
+    width: 10%;
+  }
   header .logo img {
-    height: 100%;
     width: 80%;
   }
   header .menu {
@@ -591,15 +600,13 @@ footer .content .copyrights .legal a {
     width: 100%;
     height: 100%;
   }
-  section.hero .content .links {
+  section.hero .content .content-footer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
-  section.hero .content .links div {
-    width: -moz-fit-content;
-    width: fit-content;
+  section.hero .content .content-footer .btn {
+    align-items: center;
   }
   section.hero .stats {
     position: absolute;
@@ -756,6 +763,14 @@ footer .content .copyrights .legal a {
     align-items: center;
     flex-direction: column;
   }
+  footer .logo {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+  }
+  footer .logo img {
+    width: 10%;
+  }
   footer .content {
     width: 100%;
     display: flex;
@@ -799,5 +814,13 @@ footer .content .copyrights .legal a {
   }
   to {
     transform: translateY(0);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 825px) {
+  section.features .feature-item-1 .feature-item-image img,
+  section.features .feature-item-2 .feature-item-image img,
+  section.features .feature-item-3 .feature-item-image img {
+    width: 90%;
+    height: 50%;
   }
 }/*# sourceMappingURL=main.css.map */
