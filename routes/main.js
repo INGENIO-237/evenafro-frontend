@@ -9,9 +9,15 @@ router.get("", (req, res) => {
 router.get("/how-it-works", (req, res) => {
   res.render("how-it-works");
 });
+
+router.get("/pricing", (req, res) => {
+  res.render("pricing");
+});
+
 router.get("/policies", (req, res) => {
   res.render("policies");
 });
+
 router.get("/cookies", (req, res) => {
   res.render("cookies");
 });
