@@ -26,6 +26,10 @@ header {
     display: none;
   }
 
+  .link-app {
+    text-decoration: none;
+  }
+
   .logo {
     display: flex;
     justify-content: center;
@@ -492,6 +496,26 @@ section.downloads {
         .upper-text {
           font-size: 10px;
         }
+      }
+
+      .google-play {
+        background: #fff;
+        color: #000;
+        margin-right: 1em;
+
+        .upper-text {
+          text-transform: uppercase;
+        }
+      }
+      .google-play:hover,
+      .app-store:hover {
+        transform: translateY(-5px);
+        cursor: pointer;
+      }
+
+      .app-store {
+        background: #007acc;
+        color: #fff;
       }
     }
   }
