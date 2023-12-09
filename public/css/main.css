@@ -25,6 +25,9 @@ header {
 header .language {
   display: none;
 }
+header .link-app {
+  text-decoration: none;
+}
 header .logo {
   display: flex;
   justify-content: center;
@@ -373,6 +376,23 @@ section.downloads .content .content-footer .btn img {
 }
 section.downloads .content .content-footer .btn .upper-text {
   font-size: 10px;
+}
+section.downloads .content .content-footer .google-play {
+  background: #fff;
+  color: #000;
+  margin-right: 1em;
+}
+section.downloads .content .content-footer .google-play .upper-text {
+  text-transform: uppercase;
+}
+section.downloads .content .content-footer .google-play:hover,
+section.downloads .content .content-footer .app-store:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+section.downloads .content .content-footer .app-store {
+  background: #007acc;
+  color: #fff;
 }
 
 section.form {
