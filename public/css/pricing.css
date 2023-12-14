@@ -5,7 +5,7 @@
 section.pricing-header {
   width: 100%;
   height: 90vh;
-  margin-top: 1em;
+  margin-top: 0.5em;
   background-image: url("../images/pricing-image.png");
   background-size: cover;
 }
@@ -27,6 +27,7 @@ section.pricing-header .hero-content .intro h1 {
 
 .pricings {
   padding: 2em;
+  margin-top: 2em;
 }
 .pricings h1,
 .pricings .blue {
@@ -34,6 +35,7 @@ section.pricing-header .hero-content .intro h1 {
 }
 .pricings .pricing-intro {
   text-align: center;
+  padding: 0 6em;
 }
 .pricings .pricing-intro p {
   margin-top: 1em;
