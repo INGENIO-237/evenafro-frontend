@@ -26,6 +26,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/cookies.css" />
 
     <!-- JQUERY -->
     <script
@@ -136,8 +137,25 @@
         </div>
       </div>
     </footer>
+    <div class="cookies-alert dismiss" id="cookies">
+      <div class="part_1">
+        <img src="/images/cookie.png" alt="" />
+        <p>
+          Ce site utilise des cookies pour améliorer votre expérience.
+          Acceptez-vous l'utilisation des cookies?
+        </p>
+        <p><a href="/cookies">Politiques sur les cookies</a></p>
+      </div>
+      <div class="cookie-buttons">
+        <button class="cookie-button accept" onclick="dismissCookiesPopUp()">
+          Accepter
+        </button>
+        <button class="cookie-button reject" onclick="dismissCookiesPopUp()">Refuser</button>
+      </div>
+    </div>
 
     <!-- Menu -->
     <script src="/js/menu.js"></script>
+    <script src="/js/cookies.js"></script>
   </body>
 </html>

@@ -1,0 +1,100 @@
+.cookies-alert {
+  position: fixed;
+  bottom: 2em;
+  width: 80%;
+  height: 18em;
+  border-radius: 5px;
+  margin: auto 6%;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 8px 6px 10px rgba(100, 98, 98, 0.4549019608);
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+}
+.cookies-alert .part_1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  height: 50%;
+  display: flex;
+}
+.cookies-alert .part_1 img {
+  height: 70%;
+}
+.cookies-alert .part_1 p {
+  font-size: inherit;
+}
+.cookies-alert .part_1 p a {
+  text-decoration: none;
+  color: #007acc;
+}
+.cookies-alert .cookie-buttons {
+  margin-top: 2.5em;
+}
+.cookies-alert .cookie-buttons button {
+  border: none;
+  padding: 1.5em;
+  border-radius: 6px;
+  color: white;
+  font-family: inherit;
+  transition: 0.5s ease-in-out;
+}
+.cookies-alert .cookie-buttons button:hover {
+  transform: scale(110%);
+  cursor: pointer;
+}
+.cookies-alert .cookie-buttons .accept {
+  background-color: #007acc;
+}
+.cookies-alert .cookie-buttons .reject {
+  background-color: red;
+}
+
+.dismiss {
+  transform: translateX(150%);
+  display: none;
+}
+
+@media only screen and (min-width: 720px) {
+  .cookies-alert {
+    height: 10em;
+    margin: auto 10%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+  }
+  .cookies-alert .part_1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    display: flex;
+    width: 70%;
+  }
+  .cookies-alert .part_1 img {
+    height: 100%;
+  }
+  .cookies-alert .part_1 p {
+    text-align: center;
+  }
+  .cookies-alert .cookie-buttons {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    width: 30%;
+  }
+  .cookies-alert .cookie-buttons button:nth-child(1) {
+    margin-right: 1em;
+  }
+  .dismiss {
+    transform: translateX(150%);
+    display: none;
+  }
+}/*# sourceMappingURL=cookies.css.map */
